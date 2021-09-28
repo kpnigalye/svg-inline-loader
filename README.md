@@ -75,9 +75,17 @@ npm install svg-inline-loader --save-dev
 Simply add configuration object to `module.loaders` like this.
 
 ```javascript
-    {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
+    module.exports = {
+        module: {
+            rules: [
+                {
+                    test: /\.svg$/,
+                    loader: 'svg-inline-loader'
+                },
+                ...
+            ]
+        }
+        ...
     }
 ```
 
@@ -148,9 +156,17 @@ See [loader-utils](https://github.com/webpack/loader-utils#interpolatename) for 
 
 Preferred usage is via a `module.loaders`:
 ```js
-    {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader?classPrefix'
+    module.exports = {
+        module: {
+            rules: [
+                {
+                    test: /\.svg$/,
+                    loader: 'svg-inline-loader?classPrefix'
+                },
+                ...
+            ]
+        }
+        ...
     }
 ```
 
